@@ -1,6 +1,5 @@
 'use client';
 
-import { useQuestions } from '@/lib/tanstack-query/hooks/useQuestions';
 import { shuffleArray } from './shuffleArray';
 import { useMemo, useState } from 'react';
 import QuestionCard from './QuestionCard';

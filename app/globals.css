@@ -1,8 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #10b981;
+  --primaryHover: #059669;
+  --primaryActive: #047857;
+
+  --secondary: #d1fae5;
+  --secondaryHover: #a7f3d0;
+  --secondaryActive: #6ee7b7;
+
+  --border: #34d399;
 }
 
 @theme inline {
@@ -10,6 +20,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-gowun: var(--font-gowun);
+  /* 브랜드 컬러 변수 선언 */
+  --color-primary: var(--primary);
+  --color-primaryHover: var(--primaryHover);
+  --color-primaryActive: var(--primaryActive);
+
+  --color-secondary: var(--secondary);
+  --color-secondaryHover: var(--secondaryHover);
+  --color-secondaryActive: var(--secondaryActive);
+
+  /* 폰트 패밀리 변수 */
+  --font-sans: 'Pretendard', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +44,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-gowun);
 }

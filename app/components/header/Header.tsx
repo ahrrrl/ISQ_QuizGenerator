@@ -11,7 +11,7 @@ export default function Header() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className='flex justify-between items-center px-16 py-3 border-b shadow-md fixed top-0 left-0 right-0 bg-white z-50'>
+    <header className='flex justify-between items-center px-8 sm:px-16 py-3 border-b shadow-md fixed top-0 left-0 right-0 z-50'>
       {/* 로고 */}
       <Link
         href='/'
@@ -26,7 +26,7 @@ export default function Header() {
       <div className='relative'>
         <button
           onClick={toggleMobileMenu}
-          className='block sm:hidden text-base font-medium hover:underline'
+          className='block sm:hidden hover:underline'
           aria-expanded={isMobileMenuOpen}
           aria-controls='mobile-menu'
         >
@@ -43,7 +43,7 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div
           id='mobile-menu'
-          className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center gap-6 md:hidden'
+          className='fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white md:hidden'
         >
           <button
             onClick={toggleMobileMenu}
@@ -58,7 +58,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
               className='text-xl font-semibold hover:underline'
             >
-              {title}
+              <span className='text-black'>{title}</span>
             </Link>
           ))}
         </div>

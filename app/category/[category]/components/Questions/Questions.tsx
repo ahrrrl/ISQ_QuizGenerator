@@ -46,7 +46,7 @@ export default function Questions({ category, questions }: QuestionsProps) {
       {/* 문제 영역 */}
       <section className='row-start-2 min-h-0 w-full h-full'>
         {!current ? (
-          <div className='text-center py-8 text-gray-500'>문제가 없습니다.</div>
+          <div className='text-center py-8'>문제가 없습니다.</div>
         ) : (
           <QuestionCard
             question={current.question}

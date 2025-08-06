@@ -10,7 +10,7 @@ export default async function CategoryPage({
   const questions = await fetchQuestionsByCategory(category);
 
   return (
-    <div className='h-screen w-full pt-20 pb-20 p-8 sm:p-20'>
+    <div className='h-screen w-full pt-20 p-8 sm:p-20'>
       <Questions category={category} questions={questions} />
     </div>
   );

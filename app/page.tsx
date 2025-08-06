@@ -4,10 +4,10 @@ import HomeTitle from './components/home/homeTitle/HomeTitle';
 
 export default async function Home() {
   return (
-    <div className='h-screen flex flex-col'>
-      <main className='flex-1 flex flex-col items-center justify-center gap-12 p-8 pb-20 sm:p-20'>
+    <div className='min-h-screen flex flex-col p-8 sm:p-20'>
+      <main className='flex-1 flex flex-col items-center justify-center gap-12'>
         <HomeTitle />
-        <section className='items-center'>
+        <section>
           <CategoryList />
         </section>
       </main>

@@ -26,7 +26,7 @@ export default function QuestionCard({ question, answer, onNext }: Props) {
   };
 
   return (
-    <div className='h-full grid grid-rows-[1fr_30px_2fr] border border-primary p-6 rounded-xl cursor-pointer shadow-md bg-white '>
+    <div className='h-full grid grid-rows-[1fr_30px_1fr] border border-primary p-4 rounded-xl shadow-md select-none'>
       <div
         className='row-start-1 overflow-y-auto h-full'
         onClick={handleQuestionClick}
@@ -42,11 +42,9 @@ export default function QuestionCard({ question, answer, onNext }: Props) {
         onClick={handleAnswerClick}
       >
         {showAnswer ? (
-          <p className='text-lg whitespace-pre-wrap text-gray-800 select-none'>
-            A. {answer}
-          </p>
+          <p className='text-lg whitespace-pre-wrap'>A. {answer}</p>
         ) : (
-          <p className='group-hover:text-blue-600 group-hover:underline'>
+          <p className='group-hover:text-primary group-hover:underline'>
             답 보기
           </p>
         )}

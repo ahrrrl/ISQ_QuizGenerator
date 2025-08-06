@@ -1,6 +1,6 @@
-import CategoryList from '@/components/home/categoryList/CategoryList';
-import Footer from '@/components/home/footer/Footer';
-import HomeTitle from '@/components/home/homeTitle/HomeTitle';
+import CategoryList from './components/home/categoryList/CategoryList';
+import Footer from './components/home/footer/Footer';
+import HomeTitle from './components/home/homeTitle/HomeTitle';
 
 export default async function Home() {
   return (

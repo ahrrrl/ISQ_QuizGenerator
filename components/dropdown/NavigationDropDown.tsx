@@ -110,9 +110,9 @@ const NavigationDropdown = ({
         type='button'
         onClick={handleClick}
         className={`
-          inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 
-          hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors duration-200
-          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+          inline-flex items-center px-4 py-2 font-medium 
+        hover:bg-gray-100 rounded-md transition-colors duration-200
+          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
           ${triggerClassName}
         `}
         aria-expanded={isOpen}
@@ -135,7 +135,7 @@ const NavigationDropdown = ({
         <div
           className={`
             absolute left-0 z-50 mt-1 w-32 origin-top-left bg-white 
-            border border-gray-200 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 
+            border border-gray-200 rounded-md shadow-lg ring-1 ring-primary ring-opacity-5 
             focus:outline-none animate-in fade-in-0 zoom-in-95 duration-100
             ${menuClassName}
           `}
@@ -148,8 +148,8 @@ const NavigationDropdown = ({
                 key={index}
                 href={item.link}
                 className={`
-                  block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 
-                  hover:text-gray-900 transition-colors duration-150
+                  block px-4 py-2 hover:bg-gray-100 
+                  transition-colors duration-150
                   first:rounded-t-md last:rounded-b-md
                   ${itemClassName}
                 `}

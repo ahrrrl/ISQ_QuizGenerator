@@ -1,6 +1,6 @@
+import Button from '@/components/button/Button';
 import { CATEGORY_LIST } from '@/constants';
 import Link from 'next/link';
-import Button from '../../button/Button';
 
 interface CategoryList {
   title: string;

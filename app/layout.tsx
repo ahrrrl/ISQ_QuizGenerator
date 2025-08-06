@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Gowun_Dodum } from 'next/font/google';
-import Header from '@/components/header/Header';
+import Header from './components/header/Header';
 
 const GowunFont = Gowun_Dodum({
   subsets: ['latin'],

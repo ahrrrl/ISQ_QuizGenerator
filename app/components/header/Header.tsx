@@ -1,9 +1,10 @@
 'use client';
 
+import NavigationDropdown from '@/components/dropdown/NavigationDropDown';
 import { CATEGORY_LIST } from '@/constants';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import NavigationDropdown from '../dropdown/NavigationDropDown';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,28 +13,38 @@ export default function Header() {
   return (
     <header className='flex justify-between items-center px-16 py-3 border-b shadow-md fixed top-0 left-0 right-0 bg-white z-50'>
       {/* 로고 */}
-      <Link href='/' className='text-xl font-bold'>
-        정실이
+      <Link
+        href='/'
+        className='flex items-center gap-2'
+        aria-label='홈으로 이동'
+      >
+        <Image src='/logo.png' alt='정실이 로고' width={44} height={44} />
+        <span className='text-xl font-bold'>정실이</span>
       </Link>
 
-      {/* 문제 버튼 */}
+      {/* 문제 버튼 (모바일 상태)*/}
       <div className='relative'>
         <button
           onClick={toggleMobileMenu}
-          className='text-base font-medium hover:underline sm:hidden block'
+          className='block sm:hidden text-base font-medium hover:underline'
+          aria-expanded={isMobileMenuOpen}
+          aria-controls='mobile-menu'
         >
           문제
         </button>
 
         {/* 데스크탑 드롭다운 */}
-        <div className='sm:block hidden'>
+        <div className='hidden sm:block'>
           <NavigationDropdown title={'문제'} items={CATEGORY_LIST} />
         </div>
       </div>
 
       {/* 모바일 전체화면 오버레이 */}
       {isMobileMenuOpen && (
-        <div className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center gap-6 md:hidden'>
+        <div
+          id='mobile-menu'
+          className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center gap-6 md:hidden'
+        >
           <button
             onClick={toggleMobileMenu}
             className='absolute top-4 right-4 text-2xl font-bold'

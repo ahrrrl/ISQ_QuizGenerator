@@ -5,10 +5,16 @@ import { useState } from 'react';
 interface Props {
   question: string;
   answer: string;
+  description: string;
   onNext: () => void;
 }
 
-export default function QuestionCard({ question, answer, onNext }: Props) {
+export default function QuestionCard({
+  question,
+  answer,
+  description,
+  onNext,
+}: Props) {
   const [showAnswer, setShowAnswer] = useState(false);
 
   const handleAnswerClick = () => {
@@ -42,7 +48,9 @@ export default function QuestionCard({ question, answer, onNext }: Props) {
         onClick={handleAnswerClick}
       >
         {showAnswer ? (
-          <p className='text-lg whitespace-pre-wrap'>A. {answer}</p>
+          <p className='text-lg whitespace-pre-wrap'>
+            A. {answer} <br /> {description}
+          </p>
         ) : (
           <p className='group-hover:text-primary group-hover:underline'>
             답 보기

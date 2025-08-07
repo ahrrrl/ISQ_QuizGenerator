@@ -20,7 +20,7 @@ export async function GET(
   const sheets = google.sheets({ version: 'v4', auth });
 
   const spreadsheetId = process.env.GOOGLE_SPREAD_SHEET_ID;
-  const range = `${category}!A2:C`; // 시트 이름 동적
+  const range = `${category}!A2:D`;
 
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId,
@@ -28,12 +28,12 @@ export async function GET(
   });
 
   const rows = res.data.values || [];
-
   const questions: QuestionItem[] = rows.map(
-    ([category, question, answer]) => ({
+    ([category, question, answer, description]) => ({
       category,
       question,
       answer,
+      description,
     })
   );
 

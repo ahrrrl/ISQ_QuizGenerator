@@ -6,12 +6,12 @@
 
 ## 배포
 
-[정실이](isq-quiz-generator.vercel.app)
+[정실이](https://isq-quiz-generator.vercel.app/)
 
 ## 해야할 것
-
-- 문제 감별 ( 아직 구글 시트에 있는 문제들은 감별되지 않은 문제 )
 
 - 로딩 페이지 만들기
 
 - 메타데이터 수정
+
+- 추가 카테고리 제작

@@ -1,7 +1,7 @@
 'use client';
 
 import { shuffleArray } from './shuffleArray';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import QuestionCard from './QuestionCard';
 import NavigationButtons from './NavigationButtons';
 import { QuestionItem } from '@/types';

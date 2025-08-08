@@ -1,6 +1,4 @@
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-export default function GithubIcon(props: IconProps) {
+export default function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       className='my-icon'

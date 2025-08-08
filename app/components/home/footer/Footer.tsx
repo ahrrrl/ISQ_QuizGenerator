@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Suspense } from 'react';
 import ModifiedTime from '../modifiedTime/ModifiedTime';
+import GithubIcon from '@/components/icons/GithubIcon';
 
 export default function Footer() {
   return (
@@ -9,13 +10,7 @@ export default function Footer() {
         href='naver.com'
         className='flex gap-2 hover:underline hover:underline-offset-4'
       >
-        <Image
-          aria-hidden
-          src='/github.svg'
-          alt='github icon'
-          width={24}
-          height={24}
-        />
+        <GithubIcon width={24} height={24} />
         깃허브
       </a>
       <a

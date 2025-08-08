@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --backgroundSecond: #ffffff;
 
   --primary: #10b981;
   --primaryHover: #059669;
@@ -18,8 +19,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-backgroundSecond: var(--backgroundSecond);
   --font-gowun: var(--font-gowun);
   /* 브랜드 컬러 변수 선언 */
   --color-primary: var(--primary);
@@ -34,10 +34,19 @@
   --font-sans: 'Pretendard', sans-serif;
 }
 
+.my-icon {
+  color: black;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1f1e1e;
     --foreground: #ededed;
+    --backgroundSecond: #302f2f;
+  }
+
+  .my-icon {
+    color: white;
   }
 }
 

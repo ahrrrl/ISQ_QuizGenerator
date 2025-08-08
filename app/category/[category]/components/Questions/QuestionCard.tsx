@@ -32,7 +32,7 @@ export default function QuestionCard({
   };
 
   return (
-    <div className='h-full grid grid-rows-[auto_30px_1fr] border border-primary p-4 rounded-xl shadow-md select-none'>
+    <div className='h-full grid grid-rows-[auto_30px_1fr] border border-primary bg-backgroundSecond p-4 rounded-xl shadow-md select-none'>
       <div
         className='row-start-1 overflow-y-auto h-full min-h-[100px]'
         onClick={handleQuestionClick}

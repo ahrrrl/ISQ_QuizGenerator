@@ -15,7 +15,7 @@ const sizeClasses = {
 } as const;
 
 const variantClasses = {
-  default: 'bg-primary text-white hover:bg-primaryHover',
+  default: 'bg-primary text-white hover:bg-primary-hover',
   progress: `border border-primary text-primary hover:text-white hover:bg-transparent
   before:content-[""] before:absolute before:top-0 before:left-0 before:h-full before:w-full before:z-[-1] 
   before:bg-primary before:origin-left before:rounded-md before:transition-transform before:duration-300 before:ease-in-out before:scale-x-0 hover:before:scale-x-100`,

@@ -1,48 +1,38 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --backgroundSecond: #ffffff;
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --background-secondary: #ffffff;
+    --background-hover: #eeeded;
 
-  --primary: #10b981;
-  --primaryHover: #059669;
-  --primaryActive: #047857;
+    --primary: #10b981;
+    --primary-hover: #059669;
+    --primary-active: #047857;
 
-  --secondary: #d1fae5;
-  --secondaryHover: #a7f3d0;
-  --secondaryActive: #6ee7b7;
+    --sub-color: #d1fae5;
+    --sub-color-hover: #a7f3d0;
+    --sub-color-active: #6ee7b7;
+  }
 
-  --border: #34d399;
-}
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-gowun);
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-backgroundSecond: var(--backgroundSecond);
-  --font-gowun: var(--font-gowun);
-  /* 브랜드 컬러 변수 선언 */
-  --color-primary: var(--primary);
-  --color-primaryHover: var(--primaryHover);
-  --color-primaryActive: var(--primaryActive);
-
-  --color-secondary: var(--secondary);
-  --color-secondaryHover: var(--secondaryHover);
-  --color-secondaryActive: var(--secondaryActive);
-
-  /* 폰트 패밀리 변수 */
-  --font-sans: 'Pretendard', sans-serif;
-}
-
-.my-icon {
-  color: black;
+  .my-icon {
+    color: black;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1f1e1e;
     --foreground: #ededed;
-    --backgroundSecond: #302f2f;
+    --background-secondary: #302f2f;
+    --background-hover: #535252;
   }
 
   .my-icon {
@@ -50,8 +40,18 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-gowun);
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-hover: var(--background-hover);
+  --font-gowun: var(--font-gowun);
+  /* 브랜드 컬러 변수 선언 */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+
+  --color-sub-color: var(--sub-color);
+  --color-sub-color-hover: var(--sub-color-hover);
+  --color-sub-color-active: var(--sub-color-active);
 }

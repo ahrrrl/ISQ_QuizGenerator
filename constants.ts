@@ -19,8 +19,8 @@ export const SECONDS = {
 } as const;
 
 export const CATEGORY_LIST = [
-  { title: '보안', link: '/category/보안' },
-  { title: '디자인패턴', link: '/category/디자인패턴' },
-  { title: 'IT신기술', link: '/category/IT신기술' },
-  { title: '네트워크', link: '/category/네트워크' },
+  { title: '보안', link: ROUTES.CATEGORY.SAFE },
+  { title: '디자인패턴', link: ROUTES.CATEGORY.DESIGN_PATTERN },
+  { title: 'IT신기술', link: ROUTES.CATEGORY.IT_TECH },
+  { title: '네트워크', link: ROUTES.CATEGORY.NETWORK },
 ] as const;

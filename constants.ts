@@ -1,12 +1,34 @@
-// 프론트 route
-export const ROUTES = {
-  CATEGORY: {
-    SAFE: '/category/보안',
-    DESIGN_PATTERN: '/category/디자인패턴',
-    IT_TECH: '/category/IT신기술',
-    NETWORK: '/category/네트워크',
-  },
+const CATEGORIES = [
+  '보안',
+  '디자인패턴',
+  'IT신기술',
+  '네트워크',
+  '응집도',
+  '결합도',
+  '페이지교체',
+  '정규형',
+  ' 화이트박스테스트',
+] as const;
+
+type Category = (typeof CATEGORIES)[number];
+
+type CategoryRoutes = {
+  readonly [K in Category]: `/category/${K}`;
+};
+
+// 클라이언트 주소
+export const ROUTES: { CATEGORY: CategoryRoutes } = {
+  CATEGORY: CATEGORIES.reduce((acc, category) => {
+    acc[category] = `/category/${category}`;
+    return acc;
+  }, {} as Record<Category, string>) as CategoryRoutes,
 } as const;
+
+// CATEGORY_LIST
+export const CATEGORY_LIST = CATEGORIES.map((category) => ({
+  title: category,
+  link: `/category/${category}`,
+}));
 
 // 서버 route
 export const API_ROUTES = {
@@ -17,10 +39,3 @@ export const API_ROUTES = {
 export const SECONDS = {
   ONE_DAY: 60 * 60 * 24,
 } as const;
-
-export const CATEGORY_LIST = [
-  { title: '보안', link: ROUTES.CATEGORY.SAFE },
-  { title: '디자인패턴', link: ROUTES.CATEGORY.DESIGN_PATTERN },
-  { title: 'IT신기술', link: ROUTES.CATEGORY.IT_TECH },
-  { title: '네트워크', link: ROUTES.CATEGORY.NETWORK },
-] as const;

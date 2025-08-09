@@ -7,7 +7,7 @@ const CATEGORIES = [
   '결합도',
   '페이지교체',
   '정규형',
-  ' 화이트박스테스트',
+  '화이트박스테스트',
 ] as const;
 
 type Category = (typeof CATEGORIES)[number];

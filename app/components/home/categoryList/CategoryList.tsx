@@ -9,7 +9,7 @@ interface CategoryList {
 
 const CategoryList = () => {
   return (
-    <section>
+    <section className='mt-10'>
       <ul className='flex justify-center gap-[32px] flex-wrap'>
         {CATEGORY_LIST.map((item) => (
           <li key={item.title}>

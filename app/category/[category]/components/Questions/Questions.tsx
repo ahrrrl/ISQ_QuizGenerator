@@ -57,7 +57,7 @@ export default function Questions({ category, questions }: QuestionsProps) {
 
   return (
     <>
-      <article className='grid grid-rows-[40px_1fr_40px] max-w-xl mx-auto w-full h-full gap-3'>
+      <article className='grid grid-rows-[40px_1fr_40px] max-w-xl mx-auto w-full h-[calc(100vh-200px)] gap-3'>
         {/* 헤더 영역 */}
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl'>{decodedCategory} 문제</h1>

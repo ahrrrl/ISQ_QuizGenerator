@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Gowun_Dodum } from 'next/font/google';
 import Header from './components/header/Header';
+import Footer from './components/home/footer/Footer';
 
 const GowunFont = Gowun_Dodum({
   subsets: ['latin'],
@@ -25,9 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko' className={GowunFont.variable}>
-      <body>
+      <body className='flex flex-col min-h-screen'>
         <Header />
-        {children}
+        <main className='flex-1 flex min-h-0 max-w-5xl mx-auto w-full flex-col p-8 pt-20 sm:px-20 sm:pb-8'>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

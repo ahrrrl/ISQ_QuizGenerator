@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export default function RandomGuidePage() {
   return (
-    <div className=''>
+    <>
       <h1 className='text-2xl font-bold mb-6'>랜덤문제 사용 방법</h1>
-      <p className='mb-8'>
+      <p className='mb-8 text-2xl'>
         이 페이지에서는 <strong>랜덤문제</strong> 기능을 사용하는 방법을
         설명합니다. 아래 이미지를 참고하여 문제 영역, 정답 영역, 그리고 버튼의
         역할을 확인하세요.
@@ -23,7 +23,7 @@ export default function RandomGuidePage() {
 
       {/* 1. 문제 영역 */}
       <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>1. 문제 영역</h2>
+        <h2 className='text-2xl font-semibold mb-2'>1. 문제 영역</h2>
         <ul className='list-disc list-inside space-y-1'>
           <li>문제를 표시하는 영역입니다.</li>
           <li>
@@ -36,7 +36,7 @@ export default function RandomGuidePage() {
 
       {/* 2. 정답 영역 */}
       <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>2. 정답 영역</h2>
+        <h2 className='text-2xl font-semibold mb-2'>2. 정답 영역</h2>
         <ul className='list-disc list-inside space-y-1'>
           <li>
             문제의 정답을 표시하는 영역입니다. (처음에는 정답이 보이지 않음)
@@ -54,7 +54,7 @@ export default function RandomGuidePage() {
 
       {/* 3. 버튼 */}
       <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>3. 버튼</h2>
+        <h2 className='text-2xl font-semibold mb-2'>3. 버튼</h2>
         <ul className='list-disc list-inside space-y-1'>
           <li>문제를 앞뒤로 이동할 수 있습니다.</li>
           <li>
@@ -65,13 +65,13 @@ export default function RandomGuidePage() {
       </section>
 
       {/* Tip */}
-      <section className='bg-gray-100 p-4 rounded-lg mt-8'>
+      <section className='bg-background-secondary p-4 rounded-lg mt-8'>
         <h3 className='font-semibold mb-2'>💡 Tip</h3>
         <p>
           빠른 학습을 위해 문제 영역 클릭 → 빠르게 넘어가기, 정답 영역 클릭 →
           정답 확인 후 넘어가기 패턴을 번갈아 사용해 보세요.
         </p>
       </section>
-    </div>
+    </>
   );
 }

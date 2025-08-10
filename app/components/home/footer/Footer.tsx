@@ -5,7 +5,7 @@ import GithubIcon from '@/components/icons/GithubIcon';
 
 export default function Footer() {
   return (
-    <footer className='flex gap-4 sm:gap-12 flex-wrap justify-center items-center mt-10'>
+    <footer className='flex gap-4 sm:gap-12 pb-4 sm:pb-10 flex-wrap justify-center items-center'>
       <div className='flex gap-2 sm:gap-8'>
         <a
           href='https://github.com/ahrrrl/ISQ_QuizGenerator'

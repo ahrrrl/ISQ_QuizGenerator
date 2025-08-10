@@ -6,7 +6,7 @@ export default function KeyPoints() {
   ];
 
   return (
-    <section className='flex flex-col items-center gap-2 text-center sm:text-lg'>
+    <section className='flex flex-col items-center gap-2 text-center sm:text-lg mt-12'>
       {points.map((point, idx) => (
         <p key={idx} className='font-bold'>
           {point}

@@ -1,7 +1,8 @@
 'use client';
 
 import NavigationDropdown from '@/components/dropdown/NavigationDropDown';
-import { CATEGORY_LIST } from '@/constants';
+import { CATEGORY_LIST, ROUTES } from '@/constants';
+import { CircleQuestionMarkIcon, MenuIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -11,33 +12,36 @@ export default function Header() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className='flex justify-between items-center px-8 sm:px-16 py-3 border-b shadow-md fixed top-0 left-0 right-0 z-50'>
-      {/* 로고 */}
-      <Link
-        href='/'
-        className='flex items-center gap-2'
-        aria-label='홈으로 이동'
-      >
-        <Image src='/logo.png' alt='정실이 로고' width={44} height={44} />
-        <span className='text-xl font-bold'>정실이</span>
-      </Link>
-
-      {/* 문제 버튼 (모바일 상태)*/}
-      <div className='relative'>
-        <button
-          onClick={toggleMobileMenu}
-          className='block sm:hidden hover:underline'
-          aria-expanded={isMobileMenuOpen}
-          aria-controls='mobile-menu'
+    <>
+      <header className='flex justify-between items-center px-8 sm:px-16 py-3 border-b shadow-md fixed top-0 left-0 right-0 z-50 backdrop-blur-md'>
+        {/* 오른쪽 로고 */}
+        <Link
+          href='/'
+          className='flex items-center gap-2'
+          aria-label='홈으로 이동'
         >
-          문제
-        </button>
+          <Image src='/logo.png' alt='정실이 로고' width={44} height={44} />
+          <span className='text-xl font-bold'>정실이</span>
+        </Link>
 
-        {/* 데스크탑 드롭다운 */}
-        <div className='hidden sm:block'>
-          <NavigationDropdown title={'문제'} items={CATEGORY_LIST} />
+        {/* 왼쪽 */}
+        <div className='flex justify-center items-center gap-6'>
+          <Link href={ROUTES.GUIDE}>
+            <CircleQuestionMarkIcon className='my-icon' />
+          </Link>
+          <NavigationDropdown
+            className='hidden sm:block'
+            title={'문제'}
+            items={CATEGORY_LIST}
+          />
+          <MenuIcon
+            onClick={toggleMobileMenu}
+            className='block sm:hidden my-icon cursor-pointer'
+            aria-expanded={isMobileMenuOpen}
+            aria-controls='mobile-menu'
+          />
         </div>
-      </div>
+      </header>
 
       {/* 모바일 전체화면 오버레이 */}
       {isMobileMenuOpen && (
@@ -63,6 +67,6 @@ export default function Header() {
           ))}
         </div>
       )}
-    </header>
+    </>
   );
 }

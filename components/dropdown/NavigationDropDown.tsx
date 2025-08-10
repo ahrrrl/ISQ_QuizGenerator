@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import clsx from 'clsx';
 
 // 타입 정의
 type MenuItem = {
@@ -100,7 +101,7 @@ const NavigationDropdown = ({
 
   return (
     <div
-      className={`relative inline-block ${className}`}
+      className={clsx(`relative inline-block, ${className}`)}
       ref={dropdownRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -110,7 +111,7 @@ const NavigationDropdown = ({
         type='button'
         onClick={handleClick}
         className={`
-          inline-flex items-center px-4 py-2 font-medium 
+          inline-flex items-center px-4 py-2 font-medium cursor-pointer
         bg-background-secondary rounded-md transition-colors duration-200
           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
           ${triggerClassName}

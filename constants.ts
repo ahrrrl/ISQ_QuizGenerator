@@ -17,11 +17,12 @@ type CategoryRoutes = {
 };
 
 // 클라이언트 주소
-export const ROUTES: { CATEGORY: CategoryRoutes } = {
+export const ROUTES = {
   CATEGORY: CATEGORIES.reduce((acc, category) => {
     acc[category] = `/category/${category}`;
     return acc;
   }, {} as Record<Category, string>) as CategoryRoutes,
+  GUIDE: '/guide',
 } as const;
 
 // CATEGORY_LIST

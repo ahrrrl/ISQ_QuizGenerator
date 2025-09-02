@@ -63,7 +63,7 @@
 
 ## 📈 프로젝트 현황
 
-프로젝트 링크: [https://github.com/ahrrrl/ISQ_QuizGenerator](https://github.com/ahrrrl/ISQ_QuizGenerator)
+프로젝트 링크: [바로가기](https://isq-quiz-generator.vercel.app)
 
 ---
 
